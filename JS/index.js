@@ -21,12 +21,13 @@ $(".btn").click(function () {
         nextSequence();
         playing = true;
     }
-    
-    userChosenColor = $(this).attr("id");
-    userPattern.push(userChosenColor);
-    playSound(userChosenColor);
-    animateButtonPress(this);
-    checkAnswer(userPattern.length - 1);
+    else{
+        userChosenColor = $(this).attr("id");
+        userPattern.push(userChosenColor);
+        playSound(userChosenColor);
+        animateButtonPress(this);
+        checkAnswer(userPattern.length - 1);
+    }
 })
 
 $(document).keypress(function () {
