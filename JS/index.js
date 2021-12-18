@@ -17,8 +17,10 @@ var userChosenColor;
 //User Input
 
 $(".btn").click(function () {
-    if(!playing)
-    return null;
+    if(playing == false){
+        nextSequence();
+        playing = true;
+    }
     
     userChosenColor = $(this).attr("id");
     userPattern.push(userChosenColor);
